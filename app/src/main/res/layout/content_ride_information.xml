@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.outnative.bluebus.RideInformationActivity"
+    android:gravity="center"
+    tools:showIn="@layout/activity_ride_information">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:id="@+id/toolbar_layout"
+        android:padding="0dp"
+        android:background="@color/colorPrimary">
+        <FrameLayout
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:id="@+id/back_icon_layout"
+            android:layout_marginTop="2dp">
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@mipmap/ic_back"
+                android:layout_gravity="center"/>
+        </FrameLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:text="17 Aug 2017"
+            android:layout_marginLeft="50dp"
+            android:textColor="#FFF"
+            android:id="@+id/ride_date"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            />
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar_layout">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:id="@+id/textview_linear_layout"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="----------------------------------------"
+                    android:layout_marginBottom="5dp"
+                    android:textColor="#FFF"
+                    android:textSize="25dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:id="@+id/ride_name" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_marginLeft="13dp"
+                    android:text="--------------------"
+                    android:visibility="gone"
+                    android:textColor="#FFF"
+                    android:id="@+id/ride_price" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="--------------------"
+                    android:layout_marginLeft="13dp"
+                    android:visibility="gone"
+                    android:textColor="#FFF"
+                    android:id="@+id/ride_boarding_time" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="--------------------"
+                    android:layout_marginLeft="13dp"
+                    android:visibility="gone"
+                    android:textColor="#FFF"
+                    android:id="@+id/ride_arrival_time" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="--------------------"
+                    android:textColor="#FFF"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:id="@+id/available_seat" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Travelling Through: Mahayandra Highway"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:textColor="#FFF"
+                    android:textSize="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:id="@+id/ride_route" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/select_seat_button_layout"
+                android:layout_below="@+id/textview_linear_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:textSize="17dp"
+                    android:textColor="#FFF"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:paddingBottom="3dp"
+                    android:padding="3dp"
+                    android:text="Touch To Select Seat For Your Ride"
+                    android:textAllCaps="false"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/select_seat_button"
+                    android:background="@drawable/button"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="21 - 22 - 23 - 1"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:visibility="gone"
+                    android:textSize="25dp"
+                    android:textColor="@color/seatColor"
+                    android:layout_marginBottom="10dp"
+                    android:id="@+id/ride_selected_seat" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:id="@+id/selected_seat_linear_layout"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                </LinearLayout>
+            </LinearLayout>
+
+    </RelativeLayout>
+    </ScrollView>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="Procced"
+        android:textColor="#FFF"
+        android:textSize="20dp"
+        android:background="@color/colorPrimary"
+        android:id="@+id/proccedButton"
+        android:textAllCaps="false"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/ride_details_progressBar" />
+
+</RelativeLayout>

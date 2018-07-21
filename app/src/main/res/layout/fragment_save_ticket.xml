@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="#eee"
+    android:layout_height="match_parent">
+
+    <!-- toolbar layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/toolbar_layout"
+        android:padding="5dp"
+        android:background="@color/colorPrimary">
+        <FrameLayout
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:id="@+id/back_icon_layout"
+            android:layout_marginTop="2dp">
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@mipmap/ic_back"
+                android:layout_gravity="center"/>
+        </FrameLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ticket Booked Sucessfully !"
+            android:layout_marginLeft="50dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#FFF"
+            android:id="@+id/toolbar_name"
+            android:textSize="18dp"
+            android:layout_centerVertical="true"
+            />
+
+    </RelativeLayout>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@+id/toolbar_layout"
+    android:scrollbars="vertical">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="BlueBus M-ticket"
+            android:id="@+id/bluebus_m_ticket_textview"
+            android:layout_gravity="center_horizontal" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar_layout"
+        android:padding="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="#FFF"
+        android:layout_marginTop="10dp"
+        android:elevation="5dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Birtamode To Chitwan"
+            android:id="@+id/destination_textview"
+            android:layout_margin="3dp"
+             />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Dep Time: 4:00 am  19 Aug 2017"
+            android:layout_margin="3dp"
+            android:id="@+id/boardingTime" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Bus Name: Twiter 2312"
+            android:layout_margin="3dp"
+            android:id="@+id/bus_name" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="PNR Number : 12312321"
+            android:layout_margin="3dp"
+            android:id="@+id/pnr_number" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="E-mail : milanshrestha837@gmail.com"
+            android:layout_margin="3dp"
+            android:id="@+id/ticket_email" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Phone Number: 8050078113"
+            android:layout_margin="3dp"
+            android:id="@+id/ticket_phone_number" />
+        </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="#FFF"
+        android:layout_marginTop="10dp"
+        android:elevation="5dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="50dp"
+                android:background="#FFF"
+                android:id="@+id/tableLayout">
+
+            </TableLayout>
+        </HorizontalScrollView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Total Amount: Rs 4500"
+            android:layout_margin="3dp"
+            android:textColor="#000"
+            android:id="@+id/total_ticket_amount" />
+
+        </LinearLayout>
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Note:\n
+    1.Maximum permission passenger is 6 per requistion.\n
+    2.One permission can give one requistion from a time.\n
+    3.Please check your ticket and balance amount before leaving the window.\n
+    4.Forms not properly filled or in illegible forms shall not be enterained.\n
+    5 Choice is Subject to availablity"
+                android:layout_margin="3dp"
+                android:textColor="#000"
+                android:id="@+id/ticket_note_textview" />
+         </LinearLayout>
+    </LinearLayout>
+
+
+</ScrollView>
+
+</RelativeLayout>

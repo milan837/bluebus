@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="#FFF">
+<!-- toolbar layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/toolbar_layout"
+        android:padding="5dp"
+        android:background="@color/colorPrimary">
+        <FrameLayout
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:id="@+id/back_icon_layout"
+            android:layout_marginTop="2dp">
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@mipmap/ic_back"
+                android:layout_gravity="center"/>
+        </FrameLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Birtamode to Chitwan"
+            android:layout_marginLeft="50dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#FFF"
+            android:id="@+id/toolbar_name"
+            android:textSize="18dp"
+            android:layout_centerVertical="true"
+            />
+
+        <RelativeLayout
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:id="@+id/next_button_relative_layout"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Next"
+                android:textColor="#FFF"
+                android:id="@+id/next_button_textview"
+                android:layout_gravity="center_horizontal|bottom" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <!-- toolbar layout -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:id="@+id/button_layout"
+        android:layout_below="@+id/toolbar_layout"
+        android:gravity="center"
+        android:padding="2dp">
+
+
+        <RelativeLayout
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:minWidth="150dp"
+            android:id="@+id/source_location_layout_tab"
+            android:background="@color/button"
+            android:gravity="center">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BOARDING"
+                android:textColor="#FFF"
+                android:id="@+id/source_pick_up_textview"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:id="@+id/destination_location_layout_tab"
+            android:background="@color/colorPrimary"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DROPPING"
+                android:textColor="#FFF"
+                android:id="@+id/destination_droop_textview"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_below="@+id/button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bording_dropping_textview_bottom"
+        android:id="@+id/boarding_dropping_place_fragment"
+        android:layout_gravity="center_horizontal">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/boarding_relative_layout">
+
+                <ListView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/boarding_listview"
+                android:layout_alignParentTop="true"
+                android:divider="@null"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/loadBoardingProgressBar"
+                    android:layout_gravity="center_horizontal"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="match_parent"
+            android:id="@+id/dropping_relative_layout">
+
+
+                <ListView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dropping_listview"
+                    android:divider="@null"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/colorPrimary"
+        android:padding="5dp"
+        android:visibility="gone"
+        android:id="@+id/bording_dropping_textview_bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/boarding_location_name_display"
+            android:textSize="18dp"
+            android:layout_marginLeft="15dp"
+            android:visibility="gone"
+            android:textColor="#FFF"
+            />
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:visibility="gone"
+            android:textColor="#FFF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/dropping_location_name_display"
+            android:textSize="18dp"
+            android:layout_marginLeft="15dp"
+            />
+        </LinearLayout>
+
+</RelativeLayout>

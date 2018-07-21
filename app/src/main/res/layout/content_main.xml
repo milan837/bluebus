@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.outnative.bluebus.MainActivity"
+    android:background="#eee"
+    tools:showIn="@layout/app_bar_main">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:elevation="2dp"
+                android:background="#fff"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"
+                android:id="@+id/edit_text_linear_layout">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="From"
+                        android:textColor="#000"
+                        android:textStyle="bold"
+                        android:id="@+id/from_textview"
+                        android:textSize="20dp"
+                        android:paddingLeft="15dp"
+                        android:layout_gravity="center" />
+                </LinearLayout>
+
+                <EditText
+                    android:padding="15dp"
+                    android:hint="Pick Up Location"
+                    android:inputType="textEmailAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/source_location"
+                    android:textSize="18dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:paddingLeft="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="To"
+                        android:textColor="#000"
+                        android:textStyle="bold"
+                        android:id="@+id/to_textview"
+                        android:textSize="20dp"
+                        android:layout_gravity="center" />
+                </LinearLayout>
+
+                <EditText
+                    android:padding="15dp"
+                    android:hint="Destination Location"
+                    android:textSize="18dp"
+                    android:inputType="textEmailAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/destination_location"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginBottom="15dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:id="@+id/selectDateButtonLayout"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/button"
+                    android:layout_below="@+id/scrollView"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:gravity="center"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Select Your Ride Date"
+                        android:id="@+id/selectDateTextView"
+                        android:textColor="#FFF"
+                        android:textSize="20dp"
+                        android:layout_gravity="center" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edit_text_linear_layout"
+                android:id="@+id/date_show_relative_layout"
+                android:elevation="2dp"
+                android:layout_marginLeft="10dp"
+                android:padding="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#FFF"
+                android:layout_marginBottom="50dp"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18dp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Date of journey"
+                    android:layout_marginBottom="8dp"
+                    android:textStyle="bold"
+                    android:id="@+id/select_date_title_textview" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:textSize="40dp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="23 AUG 2017"
+                    android:layout_marginBottom="8dp"
+                    android:id="@+id/show_selected_ride_date_textview"
+                    android:textColor="@color/seatColor" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="25dp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Today"
+                    android:layout_marginBottom="8dp"
+                    android:textStyle="bold"
+                    android:id="@+id/today_day_date_select" />
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Search Ride"
+        android:textColor="#FFF"
+        android:textSize="20dp"
+        android:background="@color/colorPrimary"
+        android:id="@+id/searchRideButton"
+        android:textAllCaps="false"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="77dp"
+        android:elevation="10dp"
+        android:visibility="gone"
+        android:divider="@null"
+        android:background="#FFF"/>
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/destination_location_listview"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="155dp"
+        android:elevation="10dp"
+        android:visibility="gone"
+        android:divider="@null"
+        android:background="#FFF"/>
+
+</RelativeLayout>

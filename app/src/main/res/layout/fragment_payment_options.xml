@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eee">
+
+    <!-- toolbar layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/toolbar_layout"
+        android:padding="5dp"
+        android:background="@color/colorPrimary">
+        <FrameLayout
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:id="@+id/back_icon_layout"
+            android:layout_marginTop="2dp">
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@mipmap/ic_back"
+                android:layout_gravity="center"/>
+        </FrameLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choose Your Payment Method !"
+            android:layout_marginLeft="50dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#FFF"
+            android:id="@+id/toolbar_name"
+            android:textSize="18dp"
+            android:layout_centerVertical="true"
+            />
+
+    </RelativeLayout>
+    <!-- toolbar layout -->
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:elevation="3dp"
+        android:background="#FFF"
+        android:layout_marginBottom="15dp"
+        android:layout_gravity="center_horizontal">
+
+        <TextView
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Credit Card"
+            android:id="@+id/credit_card_title" />
+
+        <RelativeLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="50dp"
+            android:id="@+id/creadit_card_form"
+            android:visibility="gone"
+            android:padding="5dp"
+            android:background="#eee">
+
+        </RelativeLayout>
+
+        <TextView
+            android:padding="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Debit Card"
+            android:id="@+id/debit_card_title" />
+
+        <RelativeLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="50dp"
+            android:visibility="gone"
+            android:padding="5dp"
+            android:id="@+id/debit_card_form"
+            android:background="#eee">
+
+        </RelativeLayout>
+
+        <TextView
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Net Banking"
+            android:id="@+id/net_banking_title" />
+
+        <RelativeLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:minHeight="50dp"
+            android:id="@+id/net_banking_form"
+            android:padding="5dp"
+            android:background="#eee">
+
+        </RelativeLayout>
+
+        <TextView
+            android:padding="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Wallet Pay"
+            android:id="@+id/wallet_pay_title" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="50dp"
+            android:padding="5dp"
+            android:id="@+id/wallet_pay_form"
+            android:gravity="center">
+
+            <!-- items for mobile wallets -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="120dp"
+                android:minWidth="120dp"
+                android:layout_marginRight="5dp"
+                android:gravity="center"
+                android:id="@+id/esewa_wallet_payment">
+
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:id="@+id/esewa_wallet_image"
+                    android:src="@mipmap/ic_esewa"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="esewa"
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/esewa_wallet_text" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="120dp"
+                android:layout_marginLeft="5dp"
+                android:minWidth="120dp"
+                android:gravity="center"
+                android:id="@+id/ipay_wallet_payment">
+
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:id="@+id/ipay_wallet_image"
+                    android:src="@mipmap/ic_ipay"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="ipay"
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/ipay_wallet_text" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

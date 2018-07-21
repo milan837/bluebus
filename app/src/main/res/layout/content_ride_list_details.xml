@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF"
+    tools:context="com.outnative.bluebus.RideListActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/toolbar_layout"
+        android:padding="5dp"
+        android:background="@color/colorPrimary">
+        <FrameLayout
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:id="@+id/back_icon_layout"
+            android:layout_marginTop="2dp">
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@mipmap/ic_back"
+                android:layout_gravity="center"/>
+        </FrameLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select Your Seat"
+                android:layout_marginLeft="50dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#FFF"
+                android:id="@+id/toolbar_route_title"
+                android:textSize="20dp"
+                android:layout_centerVertical="true"
+                />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_below="@+id/toolbar_layout"
+        android:id="@+id/ride_destination_details_bar"
+        android:background="@color/button">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="Ride On 2017-Aug-21"
+            android:layout_centerHorizontal="true"
+            android:textColor="#FFF"
+            android:id="@+id/show_ride_date_toolbar_textView"
+            android:textSize="13dp"
+            />
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/content_layout"
+        android:layout_below="@+id/ride_destination_details_bar">
+
+
+     <!--   <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="information"
+            android:id="@+id2/busInformationButton"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+-->
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null"
+            android:id="@+id/ride_list_list_view" />
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBar"
+            android:layout_gravity="center"
+            android:indeterminate="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Sorry Ride Not Found"
+            android:textSize="30dp"
+            android:textColor="@color/button"
+            android:id="@+id/ride_not_found_text_view"
+            android:visibility="gone"
+            android:layout_gravity="center" />
+    </FrameLayout>
+
+</RelativeLayout>

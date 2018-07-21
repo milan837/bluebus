@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2a8efe</color>
+    <color name="colorPrimaryDark">#2a8efe</color>
+    <color name="colorAccent">#f1ff9040</color>
+    <color name="button">#f1ff9040</color>
+    <color name="lightGreen">#39b54a</color>
+    <color name="darkgreen">#00a651</color>
+    <color name="brown">#CD5C5C</color>
+    <color name="gray">#eee</color>
+    <color name="seatColor">#80808C</color>
+    <color name="bookedSeatColor">#EBAB21</color>
+</resources>
